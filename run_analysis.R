@@ -53,7 +53,7 @@ subSet       = subSet[c("Subject", "ActivityDec", features)];
 
 subSet2 = aggregate(subSet[,names(subSet)!=c("Subject","ActivityDec")], by=list(activity = subSet$ActivityDec, subject=subSet$Subject), mean);
 
-write.table(subSet2, './tidyData.txt',row.names=TRUE,sep='\t');
+write.table(subSet2, './tidyData.txt',row.names=FALSE,sep='\t');
 
 
 
